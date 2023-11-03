@@ -3,7 +3,7 @@ home: true
 heroImage: /images/ic_launcher.png
 heroAlt: Fox terrier stickers created by MrHamster - Flaticon
 heroHeight: 220
-heroText: Foxit PDF SDK for Android
+heroText: Foxit PDF SDK for Android Doc
 tagline: 强大的PDF功能
 actions:
   - text: 快速上手 →
@@ -18,7 +18,7 @@ features:
 
   - title: 完全可定制
     details: 通过示例代码和文档，定制你的Foxit RDK集成，满足你的需求。
-footer: © 2023 wangkang
+footer: © 2023 Foxit
 ---
 
 ## Foxit PDF SDK for Android

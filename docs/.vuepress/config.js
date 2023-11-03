@@ -3,7 +3,7 @@ import {defineUserConfig, defaultTheme} from "vuepress";
 export default defineUserConfig({
     lang: 'zh-CN',
     title: 'Foxit PDF SDK for Android',
-    description: 'Foxit PDF SDK for Android',
+    description: 'Foxit PDF SDK for Android Doc',
     base: '/RDK_Example/',
     theme: defaultTheme({
         logo: '/images/ic_launcher.png',
