@@ -18,22 +18,22 @@ Android PDF SDK：快速阅读，优化操作。理由：
 - 优质支持：福昕提供高效技术支持，助你解决开发难题，提升产品效能。我们拥有PDF行业的优秀工程师团队，持续进行版本更新，增添新功能，优化现有功能，提升用户体验。选择Foxit
   PDF SDK for Android，让你的应用更上一层楼。
 
-## 包架构
+## 架构
 
 ![img.png](../.vuepress/public/images/img.png)
 
-### PDF Core API
+#### PDF Core API
 
 PDF Core API是SDK的核心部分，建立在福昕强大的底层PDF技术上。它提供了PDF基础功能操作相关的函数，包含了PDF View控件和UI
 Extensions组件中使用到的PDF核心处理功能，以确保应用程序达到高的性能和效率。该API可单独用于文档的渲染、分析、文本提取、文本搜索、表单填写、数字签名、压感笔迹(
 PSI)、证书和密码加密、注释的创建和管理等等。
 
-### PDF View Control
+#### PDF View Control
 
 PDFView控件是一个工具类，根据开发人员的需求提供开发人员与渲染的PDF文档进行交互所需要的功能接口。以福昕享有盛誉且使用广泛的PDF渲染技术为核心，View
 Control支持快速高质量的渲染、缩放、滚动和页面导览功能。该View控件继承于平台相关viewer的类，例如Android.View.ViewGroup,并且允许进行扩展来满足特定用户的需求。
 
-### UI Extensions
+#### UI Extensions
 
 UI Extensions组件是一个带内置UI的开源库，支持对内置的文本选择，标记注释、大纲导航、阅读书签、全文检索、填表、文本重排、文档附件、数字/手写签名、文档编辑和密码加密等功能进行自定义。UI
 Extensions组件中的这些功能是通过使用PDF Core API和PDF View Control来实现的。开发人员可以利用这些已有的UI实现快速构建一个PDF阅读器，同时可以根据需要灵活自定义其UI界面。
