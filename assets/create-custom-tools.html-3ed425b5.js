@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-17daac2b","path":"/guide/developer-guide/create-custom-tools.html","title":"创建自定义工具","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1699893489000,"contributors":[{"name":"Kevin-Android","email":"Kevin_Android@163.com","commits":1}]},"filePathRelative":"guide/developer-guide/create-custom-tools.md"}');export{e as data};
