@@ -6,8 +6,8 @@ heroHeight: 220
 heroText: Foxit PDF SDK for Android Doc
 tagline: 强大的PDF功能
 actions:
-  - text: 快速上手 →
-    link: /guide/getting-started.html
+  - text: 入门指南 →
+    link: /guide/developer-guide/getting-started-guide.html
     type: primary
 features:
   - title: 简单易用
@@ -26,9 +26,11 @@ footer: © 2023 Foxit
 这里提供了Foxit RDK的示例代码和详细文档，帮助你快速了解如何在你的应用中集成Foxit
 RDK，并利用其强大的PDF功能。无论你是新手还是有经验的开发者，我们都为你准备了一份简单易懂的文档，以便快速入门。
 
-### 快速开始
+### 开发者指南
 
-想要开始使用Foxit RDK吗？请查看我们的[快速入门指南](/guide/getting-started.html)，开始你的Foxit RDK之旅吧！
+想要开始使用Foxit
+RDK吗？请查看我们的[开发者指南](/RDK_Example/guide/developer-guide/introduction.html)，开始你的Foxit
+RDK之旅吧！
 
 ### 文档
 
@@ -41,4 +43,4 @@ RDK的强大功能。
 
 ### 贡献
 
-如果你发现任何错误或想要为文档做出贡献，请参考我们的[贡献指南](/contributing.html)。
+如果你发现任何错误或想要在项目中使用请联系我。

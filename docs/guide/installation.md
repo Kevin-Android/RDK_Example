@@ -28,6 +28,30 @@
 
 从官网下载到开发包打开后如下：
 
+```text
+├─ docs                             <--- API手册，开发文档和升级说明文档
+├─ icc_profile                      <--- 输出预览功能所使用的默认icc profile文件
+├─ libs                             <--- License文件，AAR，UI Extensions组件源代码
+│  ├─ pdfscan                       <--- 扫描功能组件源码
+│  ├─ uiextensions_src              <--- UI Extensions组件库源码
+│  ├─ FoxitRDK.aar                  <--- Foxit PDF SDK for Android核心包
+│  ├─ FoxitRDKUIExtensions.aar      <--- 提供UI Extensions组件所需要的库
+│  ├─ FoxitMobileScanningRDK.aar    <--- 提供扫描功能所需要的库
+│  ├─ FoxitPDFScan-UI.aar           <--- 提供实现扫描功能所需UI的Android Activities
+│  ├─ RMSSDK-x.x-release.aar        <--- 微软权限管理系统的软件开发包
+│  ├─ rms-sdk-ui.aar                <--- 提供实现RMS SDK功能所需UI的Android Activities
+│  ├─ rdk_key.txt                   <--- 示例 License key
+│  └─ rdk_sn.txt                    <--- 示例 License sn
+├─ samples                          <--- Android示例工程
+│  ├─ function_demo                 <--- PDF Core API 示例
+│  ├─ viewer_ctrl_demo              <--- PDF View Control 示例
+│  ├─ complete_pdf_viewer           <--- UI Extensions 示例
+│  └─ test_files                    <--- 示例文件
+├─ getting_started_android.pdf      <--- Foxit PDF SDK for Android快速入门
+├─ legal.txt                        <--- 法律和版权信息
+└─ release_notes.txt                <--- 发布信息
+```
+
 ![installation_package_structure_description.png](../.vuepress/public/installation_package_structure_description.png)
 
 | 文件名                         | 描述                                        |
@@ -147,69 +171,7 @@ dependencies {
 
 app下完整build.gradle如下：
 
-``` groovy
-plugins {
-    id 'com.android.application'
-}
 
-android {
-    compileSdkVersion30
-    buildToolsVersion"30.0.3"
-
-    defaultConfig {
-        applicationId"com.foxit.pdfreader"
-        minSdkVersion 19
-        targetSdkVersion  30
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner"androidx.test.runner.AndroidJUnitRunner"multiDexEnabledtrue
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-}
-
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
-}
-
-dependencies {
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation "androidx.multidex:multidex:2.0.1"
-    //  UI Extensions 使用了material来封装UI，如果使用UI Extensions一定要添加
-    implementation 'com.google.android.material:material:1.8.0'
-    //  Foxit PDF Core API 及 PDF View Control
-    implementation(name: 'FoxitRDK', ext: 'aar')
-    //  UI Extensions组件
-    implementation(name: 'FoxitRDKUIExtensions', ext: 'aar')
-    //  (可选)如果您需要使用截图功能
-    implementation 'com.edmodo:cropper:1.0.1'
-    //  (可选)如果您需要打开RMS加密的PDF文档
-    implementation(name: 'RMSSDK-4.2-release', ext: 'aar')
-    implementation(name: 'rms-sdk-ui', ext: 'aar')
-    implementation 'com.microsoft.identity.client:msal:3.0.+'
-    //  (可选)如果您需要使用扫描功能
-    implementation(name: 'FoxitPDFScan-UI', ext: 'aar')
-    implementation(name: 'FoxitMobileScanningRDK', ext: 'aar')
-    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-    //  (可选)如果您需要使用对比功能
-    implementation "io.reactivex.rxjava2:rxjava:2.2.16"
-    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
-    //  (可选)如果您需要使用签名功能
-    implementation 'org.bouncycastle:bcpkix-jdk15on:1.60'
-    implementation 'org.bouncycastle:bcprov-jdk15on:1.60'
-}
-```
 
 ::: warning
 Gradle版本的不同配置方式会有差异

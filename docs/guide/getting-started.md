@@ -1,102 +1,203 @@
-# 介绍
-
-Foxit PDF SDK for Android致力于帮助开发人员快速将强大的Foxit
-PDF技术集成到他们自己的移动端应用程序中。通过Foxit开发包，即使是对PDF了解有限的开发人员也可以在Android平台上用几
-行代码快速构建一个专业的PDF阅读器。
-
-## 为什么选择Foxit PDF SDK
-
-Foxit：领先的PDF解决方案供应商，专注显示、编辑、创建、管理及安全。Foxit PDF SDK被众多知名应用采用，因其质量、性能和功能强大。
-
-Android PDF SDK：快速阅读，优化操作。理由：
-
-- 轻松集成：数行代码，无缝融入你的应用。
-- 完美设计：简洁、友好，提供优质用户体验。
-- 灵活定制：应用层用户界面源代码，功能与界面随你变。
-- 性能稳健：OOM恢复机制，确保内存有限的设备稳定运行。
-- 福昕引擎：基于全球知名企业信赖的福昕PDF引擎，快速解析和渲染，无惧环境挑战。
-- 优质支持：福昕提供高效技术支持，助你解决开发难题，提升产品效能。我们拥有PDF行业的优秀工程师团队，持续进行版本更新，增添新功能，优化现有功能，提升用户体验。选择Foxit
-  PDF SDK for Android，让你的应用更上一层楼。
-
-## 架构
-
-![img.png](../.vuepress/public/images/img.png)
-
-#### PDF Core API
-
-PDF Core API是SDK的核心部分，建立在福昕强大的底层PDF技术上。它提供了PDF基础功能操作相关的函数，包含了PDF View控件和UI
-Extensions组件中使用到的PDF核心处理功能，以确保应用程序达到高的性能和效率。该API可单独用于文档的渲染、分析、文本提取、文本搜索、表单填写、数字签名、压感笔迹(
-PSI)、证书和密码加密、注释的创建和管理等等。
-
-#### PDF View Control
-
-PDFView控件是一个工具类，根据开发人员的需求提供开发人员与渲染的PDF文档进行交互所需要的功能接口。以福昕享有盛誉且使用广泛的PDF渲染技术为核心，View
-Control支持快速高质量的渲染、缩放、滚动和页面导览功能。该View控件继承于平台相关viewer的类，例如Android.View.ViewGroup,并且允许进行扩展来满足特定用户的需求。
-
-#### UI Extensions
-
-UI Extensions组件是一个带内置UI的开源库，支持对内置的文本选择，标记注释、大纲导航、阅读书签、全文检索、填表、文本重排、文档附件、数字/手写签名、文档编辑和密码加密等功能进行自定义。UI
-Extensions组件中的这些功能是通过使用PDF Core API和PDF View Control来实现的。开发人员可以利用这些已有的UI实现快速构建一个PDF阅读器，同时可以根据需要灵活自定义其UI界面。
-
-[//]: # (## 主要功能)
+[//]: # (# 介绍)
 
 [//]: # ()
 
-[//]: # (Foxit PDF SDK for Android包括了一些主要的功能，用来帮助应用程序开发人员在快速实现他们所需要的功能的同时减少开发成本。)
+[//]: # (Foxit PDF SDK for Android致力于帮助开发人员快速将强大的Foxit)
+
+[//]: # (PDF技术集成到他们自己的移动端应用程序中。通过Foxit开发包，即使是对PDF了解有限的开发人员也可以在Android平台上用几)
+
+[//]: # (行代码快速构建一个专业的PDF阅读器。)
 
 [//]: # ()
 
-[//]: # (| 功能                                                                      | 描述                                                                     |)
+[//]: # (## 为什么选择Foxit PDF SDK)
 
-[//]: # (|-------------------------------------------------------------------------|------------------------------------------------------------------------|)
+[//]: # ()
 
-[//]: # (| [PDF Document]&#40;../guide/basic-features/pdf-document.html&#41;               | 打开和关闭文件，设置和获取metadata。                                                 |)
+[//]: # (Foxit：领先的PDF解决方案供应商，专注显示、编辑、创建、管理及安全。Foxit PDF SDK被众多知名应用采用，因其质量、性能和功能强大。)
 
-[//]: # (| [PDF Page]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;         | 解析、渲染、阅读、编辑文档页面。                                                       |)
+[//]: # ()
 
-[//]: # (| [Render]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;           | 平台图像设备在bitmap上创建图像渲染引擎。                                                |)
+[//]: # (Android PDF SDK：快速阅读，优化操作。理由：)
 
-[//]: # (| [Reflow]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;           | 重排页面内容。                                                                |)
+[//]: # ()
 
-[//]: # (| [Crop]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;             | 裁剪PDF页面。                                                               |)
+[//]: # (- 轻松集成：数行代码，无缝融入你的应用。)
 
-[//]: # (| [Text Select]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;      | 文本选择。                                                                  |)
+[//]: # (- 完美设计：简洁、友好，提供优质用户体验。)
 
-[//]: # (| [Text Search]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;      | 文本搜索，并且支持全文索引搜索。                                                       |)
+[//]: # (- 灵活定制：应用层用户界面源代码，功能与界面随你变。)
 
-[//]: # (| [Outline]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;          | 定位和链接到文档中的兴趣点。                                                         |)
+[//]: # (- 性能稳健：OOM恢复机制，确保内存有限的设备稳定运行。)
 
-[//]: # (| [Reading Bookmark]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41; | 标记文档中感兴趣的页面和段落位置。                                                      |)
+[//]: # (- 福昕引擎：基于全球知名企业信赖的福昕PDF引擎，快速解析和渲染，无惧环境挑战。)
 
-[//]: # (| [Annotation]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;       | 创建、编辑和移除annotations。                                                   |)
+[//]: # (- 优质支持：福昕提供高效技术支持，助你解决开发难题，提升产品效能。我们拥有PDF行业的优秀工程师团队，持续进行版本更新，增添新功能，优化现有功能，提升用户体验。选择Foxit)
 
-[//]: # (| [Layers]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;           | 添加、编辑和移除PDF层内容。                                                        |)
+[//]: # (  PDF SDK for Android，让你的应用更上一层楼。)
 
-[//]: # (| [Attachments]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;      | 添加、编辑和移除文档级的附件。                                                        |)
+[//]: # ()
 
-[//]: # (| [Form]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;             | 支持JavaScript填表，通过XFDF/FDF/XML文件导入和导出表单数据。支持创建文本域、复选框、单选按钮、组合框、列表框和签名域。 |)
+[//]: # (## 架构)
 
-[//]: # (| [XFA]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;              | 支持静态和动态XFA。                                                            |)
+[//]: # ()
 
-[//]: # (| [Signature]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;        | 签名PDF文档，验证签名，添加或删除签名域。添加和验证第三方数字签名.支持签名的长期验证&#40;LTV&#41;。                     |)
+[//]: # (![img.png]&#40;../.vuepress/public/images/img.png&#41;)
 
-[//]: # (| [Fill]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;             | 用文本和符号填写扁平化表单（即非交互式表单）                                                 |)
+[//]: # ()
 
-[//]: # (| [Security]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;         | 密码和证书加密PDF文档。                                                          |)
+[//]: # (#### PDF Core API)
 
-[//]: # (| [Pan and Zoom]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;     | 调整视图中的放大倍数和位置以匹配Pan&Zoom缩略视图当中的矩形区域。                                   |)
+[//]: # ()
 
-[//]: # (| [Print]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;            | 打印PDF文档。                                                               |)
+[//]: # (PDF Core API是SDK的核心部分，建立在福昕强大的底层PDF技术上。它提供了PDF基础功能操作相关的函数，包含了PDF View控件和UI)
 
-[//]: # (| [RMS]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;              | 支持微软IRMv1和IRMv2标准的RMS解密。                                               |)
+[//]: # (Extensions组件中使用到的PDF核心处理功能，以确保应用程序达到高的性能和效率。该API可单独用于文档的渲染、分析、文本提取、文本搜索、表单填写、数字签名、压感笔迹&#40;)
 
-[//]: # (| [Comparison]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;       | 对比两个PDF文档，并且标记文档之间的差异。                                                 |)
+[//]: # (PSI&#41;、证书和密码加密、注释的创建和管理等等。)
 
-[//]: # (| [Scanning]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;         | 扫描纸质文档，并将其转换为PDF文档。                                                    |)
+[//]: # ()
 
-[//]: # (| [Speak]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;            | 支持阅读PDF文档中的文本。                                                         |)
+[//]: # (#### PDF View Control)
 
-[//]: # (| [Split Screen]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;     | 支持分屏。                                                                  |)
+[//]: # ()
 
-[//]: # (| [Out of Memory]&#40;/RDK_Example/guide/basic-features/pdf-document.html&#41;    | 从内存不足中恢复运行。                                                            |)
+[//]: # (PDFView控件是一个工具类，根据开发人员的需求提供开发人员与渲染的PDF文档进行交互所需要的功能接口。以福昕享有盛誉且使用广泛的PDF渲染技术为核心，View)
+
+[//]: # (Control支持快速高质量的渲染、缩放、滚动和页面导览功能。该View控件继承于平台相关viewer的类，例如Android.View.ViewGroup,并且允许进行扩展来满足特定用户的需求。)
+
+[//]: # ()
+
+[//]: # (#### UI Extensions)
+
+[//]: # ()
+
+[//]: # (UI Extensions组件是一个带内置UI的开源库，支持对内置的文本选择，标记注释、大纲导航、阅读书签、全文检索、填表、文本重排、文档附件、数字/手写签名、文档编辑和密码加密等功能进行自定义。UI)
+
+[//]: # (Extensions组件中的这些功能是通过使用PDF Core API和PDF View Control来实现的。开发人员可以利用这些已有的UI实现快速构建一个PDF阅读器，同时可以根据需要灵活自定义其UI界面。)
+
+# 开发者指南
+
+## Foxit PDF SDK简介
+
+### Foxit PDF SDK
+
+### Foxit PDF SDK for Android
+
+#### 为什么选择Foxit PDF SDK for Android
+
+#### Foxit PDF SDK for Android的主要框架
+
+#### UI Extensions组件概述
+
+#### Foxit PDF SDK for Android的主要功能
+
+### 评估
+
+### 授权
+
+### 关于此文档
+
+## 入门指南
+
+### 系统要求
+
+### 包结构说明
+
+### 运行demo
+
+#### Function demo
+
+#### Viewer control demo
+
+#### Complete PDF viewer demo
+
+## 快速构建一个功能齐全的PDF阅读器
+
+### 创建一个新的Android工程
+    - 3.2 集成Foxit PDF SDK for Android到您的应用程序
+    - 3.3 初始化Foxit PDF SDK for
+      Android............................................................................................
+    - 3.4 使用PDFViewCtrl显示PDF文档
+    - 3.5 打开一个RMS加密的文档
+    - 3.6 使用UI Extensions组件构建一个功能齐全的PDF阅读器......................................................
+    - 3.7 基于功能齐全的PDF阅读器添加扫描功能
+    - 3.8 分区存储 (Scoped Storage)处理 开发者指南
+
+## 自定义UI
+
+    - 4.1 通过配置文件自定义UI
+        - 4.1.1
+          JSON文件介绍.....................................................................................................................................
+        - 4.1.2 配置项描述
+        - 4.1.3 使用配置文件实例化一个UIExtensionsManager对象
+        - 4.1.4 通过配置文件自定义UI的示例
+    - 4.2 通过APIs自定义UI元素
+        - 4.2.1 自定义 top/bottom toolbar
+        - 4.2.2
+          自定义添加/移除一个特定的面板........................................................................................................
+        - 4.2.3 自定义隐藏View setting bar上的UI元素
+        - 4.2.4 自定义添加/隐藏More Menu菜单上的UI元素
+    - 4.3 通过源代码自定义UI实现
+
+## 使用SDK API
+
+    - 5.1 Render
+        - 5.1.1 如何将指定的PDF页面渲染到bitmap
+    - 5.2 Text Page
+        - 5.2.1 如何通过选择获取页面上的文本区域
+    - 5.3 Text Search
+        - 5.3.1 如何在PDF文档中搜索指定的文本模型
+    - 5.4 Bookmark (Outline)
+        - 5.4.1 如何使用深度优先顺序遍历PDF文档的bookmarks
+    - 5.5 Reading Bookmark
+        - 5.5.1 如何添加自定义reading bookmark并枚举所有的reading bookmarks
+    - 5.6 Attachment
+        - 5.6.1 如何将指定文件嵌入到PDF文档
+        - 5.6.2 如何从PDF文档中导出嵌入的附件文件，并将其另存为单个文件
+    - 5.7 Annotation 开发者指南
+        - 5.7.1 如何向PDF页面中添加注释
+        - 5.7.2 如何删除PDF页面中的注释
+        - 5.7.3 如何注册监听器获取UIExternsion的annot事件
+    - 5.8 Form
+        - 5.8.1 如何通过XML文件导入表单数据或将表单数据导出到XML文件
+    - 5.9 Security
+        - 5.9.1 如何使用密码加密PDF文件
+    - 5.10 Signature
+        - 5.10.1 如何对PDF文档进行签名，并验证签名
+        - 5.10.2 如何为签名设置定制时间格式
+
+## 创建自定义工具
+
+## 使用Cordova实现Foxit PDF SDK for Android..................................................................
+
+## 使用React Native实现Foxit PDF SDK for Android
+
+## 使用Xamarin实现Foxit PDF SDK for Android
+
+## FAQ
+
+    - 10.1 从指定的PDF文件路径打开一个PDF文档
+    - 10.2 打开PDF文档时显示指定的页面
+    - 10.3 License key和序列号无法正常工作
+    - 10.4 在PDF文档中添加link注释
+    - 10.5 向PDF文档中插入图片
+    - 10.6 SetDocModified API
+    - 10.7 高亮PDF文档中的links和设置高亮颜色
+    - 10.8 高亮PDF文档中的表单域和设置高亮颜色
+    - 10.9 支持全文索引搜索
+    - 10.10 打印PDF文档 开发者指南
+    - 10.11 夜间模式颜色设置
+    - 10.12 输出exception/crash日志信息
+    - 10.13 减小APK的大小
+    - 10.14 开启 shrink-code (设置 "minifyEnabled" 为 "true")
+    - 10.15 本地化设置
+    - 10.16
+      迁移到AndroidX.......................................................................................................................
+    - 10.17
+      支持Chromebook....................................................................................................................
+    - 10.19 如何使用 UIExtensions设置只读模式 10.18 在文档权限的基础上自定义Annotations权限 错误! 未定义书签。
+    - 1 0.20 怎样兼容Android Studio 3.2
+
+## 技术支持
 
